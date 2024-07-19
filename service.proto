@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+service FacialLandmarkerService {
+    rpc getBlendshapeStream(BlendshapeResponse) returns (stream BlendshapeResponse) {}
+}
+
+message BlendshapeResponse {
+    map<string, float> blendshape = 1;
+}
