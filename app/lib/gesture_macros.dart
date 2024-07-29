@@ -30,7 +30,7 @@ class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  MyHomePageState createState() => MyHomePageState();
 }
 
 class Gesture {
@@ -45,7 +45,7 @@ class Gesture {
   String? selectedValue;
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class MyHomePageState extends State<MyHomePage> {
   final List<Gesture> _gestures = [];
 
   void _showAddGestureDialog() {

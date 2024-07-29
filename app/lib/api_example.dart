@@ -3,7 +3,6 @@ import 'dart:ui' as ui;
 import 'package:app/grpc_generated/client.dart';
 import 'package:app/grpc_generated/init_py.dart';
 import 'package:grpc/grpc_connection_interface.dart';
-import 'package:path/path.dart';
 import 'service.dart' as service;
 
 Future<void> pyInitResult = Future(() => null);
