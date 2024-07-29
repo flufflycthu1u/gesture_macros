@@ -14,7 +14,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\rservice.proto\"\x80\x01\n\x12\x42lendshapeResponse\x12\x37\n\nblendshape\x18\x01 \x03(\x0b\x32#.BlendshapeResponse.BlendshapeEntry\x1a\x31\n\x0f\x42lendshapeEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x02:\x02\x38\x01\x32^\n\x17\x46\x61\x63ialLandmarkerService\x12\x43\n\x13getBlendshapeStream\x12\x13.BlendshapeResponse\x1a\x13.BlendshapeResponse\"\x00\x30\x01\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\rservice.proto\"\x80\x01\n\x12\x42lendshapeResponse\x12\x37\n\nblendshape\x18\x01 \x03(\x0b\x32#.BlendshapeResponse.BlendshapeEntry\x1a\x31\n\x0f\x42lendshapeEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x02:\x02\x38\x01\"\x07\n\x05\x45mpty2Q\n\x17\x46\x61\x63ialLandmarkerService\x12\x36\n\x13GetBlendshapeStream\x12\x06.Empty\x1a\x13.BlendshapeResponse\"\x00\x30\x01\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -27,6 +27,8 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['_BLENDSHAPERESPONSE']._serialized_end=146
   _globals['_BLENDSHAPERESPONSE_BLENDSHAPEENTRY']._serialized_start=97
   _globals['_BLENDSHAPERESPONSE_BLENDSHAPEENTRY']._serialized_end=146
-  _globals['_FACIALLANDMARKERSERVICE']._serialized_start=148
-  _globals['_FACIALLANDMARKERSERVICE']._serialized_end=242
+  _globals['_EMPTY']._serialized_start=148
+  _globals['_EMPTY']._serialized_end=155
+  _globals['_FACIALLANDMARKERSERVICE']._serialized_start=157
+  _globals['_FACIALLANDMARKERSERVICE']._serialized_end=238
 # @@protoc_insertion_point(module_scope)

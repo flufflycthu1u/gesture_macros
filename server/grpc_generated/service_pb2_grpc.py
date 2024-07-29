@@ -31,7 +31,8 @@ if _version_not_supported:
 
 
 class FacialLandmarkerServiceStub(object):
-    """Missing associated documentation comment in .proto file."""
+    """A service that provides the blendshapes of a face from a webcam
+    """
 
     def __init__(self, channel):
         """Constructor.
@@ -39,18 +40,20 @@ class FacialLandmarkerServiceStub(object):
         Args:
             channel: A grpc.Channel.
         """
-        self.getBlendshapeStream = channel.unary_stream(
-                '/FacialLandmarkerService/getBlendshapeStream',
-                request_serializer=service__pb2.BlendshapeResponse.SerializeToString,
+        self.GetBlendshapeStream = channel.unary_stream(
+                '/FacialLandmarkerService/GetBlendshapeStream',
+                request_serializer=service__pb2.Empty.SerializeToString,
                 response_deserializer=service__pb2.BlendshapeResponse.FromString,
                 _registered_method=True)
 
 
 class FacialLandmarkerServiceServicer(object):
-    """Missing associated documentation comment in .proto file."""
+    """A service that provides the blendshapes of a face from a webcam
+    """
 
-    def getBlendshapeStream(self, request, context):
-        """Missing associated documentation comment in .proto file."""
+    def GetBlendshapeStream(self, request, context):
+        """Streams blendshapes as maps
+        """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
@@ -58,9 +61,9 @@ class FacialLandmarkerServiceServicer(object):
 
 def add_FacialLandmarkerServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'getBlendshapeStream': grpc.unary_stream_rpc_method_handler(
-                    servicer.getBlendshapeStream,
-                    request_deserializer=service__pb2.BlendshapeResponse.FromString,
+            'GetBlendshapeStream': grpc.unary_stream_rpc_method_handler(
+                    servicer.GetBlendshapeStream,
+                    request_deserializer=service__pb2.Empty.FromString,
                     response_serializer=service__pb2.BlendshapeResponse.SerializeToString,
             ),
     }
@@ -72,10 +75,11 @@ def add_FacialLandmarkerServiceServicer_to_server(servicer, server):
 
  # This class is part of an EXPERIMENTAL API.
 class FacialLandmarkerService(object):
-    """Missing associated documentation comment in .proto file."""
+    """A service that provides the blendshapes of a face from a webcam
+    """
 
     @staticmethod
-    def getBlendshapeStream(request,
+    def GetBlendshapeStream(request,
             target,
             options=(),
             channel_credentials=None,
@@ -88,8 +92,8 @@ class FacialLandmarkerService(object):
         return grpc.experimental.unary_stream(
             request,
             target,
-            '/FacialLandmarkerService/getBlendshapeStream',
-            service__pb2.BlendshapeResponse.SerializeToString,
+            '/FacialLandmarkerService/GetBlendshapeStream',
+            service__pb2.Empty.SerializeToString,
             service__pb2.BlendshapeResponse.FromString,
             options,
             channel_credentials,

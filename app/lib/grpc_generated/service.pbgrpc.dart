@@ -21,9 +21,9 @@ export 'service.pb.dart';
 
 @$pb.GrpcServiceName('FacialLandmarkerService')
 class FacialLandmarkerServiceClient extends $grpc.Client {
-  static final _$getBlendshapeStream = $grpc.ClientMethod<$0.BlendshapeResponse, $0.BlendshapeResponse>(
-      '/FacialLandmarkerService/getBlendshapeStream',
-      ($0.BlendshapeResponse value) => value.writeToBuffer(),
+  static final _$getBlendshapeStream = $grpc.ClientMethod<$0.Empty, $0.BlendshapeResponse>(
+      '/FacialLandmarkerService/GetBlendshapeStream',
+      ($0.Empty value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.BlendshapeResponse.fromBuffer(value));
 
   FacialLandmarkerServiceClient($grpc.ClientChannel channel,
@@ -32,7 +32,7 @@ class FacialLandmarkerServiceClient extends $grpc.Client {
       : super(channel, options: options,
         interceptors: interceptors);
 
-  $grpc.ResponseStream<$0.BlendshapeResponse> getBlendshapeStream($0.BlendshapeResponse request, {$grpc.CallOptions? options}) {
+  $grpc.ResponseStream<$0.BlendshapeResponse> getBlendshapeStream($0.Empty request, {$grpc.CallOptions? options}) {
     return $createStreamingCall(_$getBlendshapeStream, $async.Stream.fromIterable([request]), options: options);
   }
 }
@@ -42,18 +42,18 @@ abstract class FacialLandmarkerServiceBase extends $grpc.Service {
   $core.String get $name => 'FacialLandmarkerService';
 
   FacialLandmarkerServiceBase() {
-    $addMethod($grpc.ServiceMethod<$0.BlendshapeResponse, $0.BlendshapeResponse>(
-        'getBlendshapeStream',
+    $addMethod($grpc.ServiceMethod<$0.Empty, $0.BlendshapeResponse>(
+        'GetBlendshapeStream',
         getBlendshapeStream_Pre,
         false,
         true,
-        ($core.List<$core.int> value) => $0.BlendshapeResponse.fromBuffer(value),
+        ($core.List<$core.int> value) => $0.Empty.fromBuffer(value),
         ($0.BlendshapeResponse value) => value.writeToBuffer()));
   }
 
-  $async.Stream<$0.BlendshapeResponse> getBlendshapeStream_Pre($grpc.ServiceCall call, $async.Future<$0.BlendshapeResponse> request) async* {
+  $async.Stream<$0.BlendshapeResponse> getBlendshapeStream_Pre($grpc.ServiceCall call, $async.Future<$0.Empty> request) async* {
     yield* getBlendshapeStream(call, await request);
   }
 
-  $async.Stream<$0.BlendshapeResponse> getBlendshapeStream($grpc.ServiceCall call, $0.BlendshapeResponse request);
+  $async.Stream<$0.BlendshapeResponse> getBlendshapeStream($grpc.ServiceCall call, $0.Empty request);
 }

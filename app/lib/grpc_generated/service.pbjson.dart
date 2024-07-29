@@ -38,3 +38,12 @@ final $typed_data.Uint8List blendshapeResponseDescriptor = $convert.base64Decode
     'Nwb25zZS5CbGVuZHNoYXBlRW50cnlSCmJsZW5kc2hhcGUaPQoPQmxlbmRzaGFwZUVudHJ5EhAK'
     'A2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgCUgV2YWx1ZToCOAE=');
 
+@$core.Deprecated('Use emptyDescriptor instead')
+const Empty$json = {
+  '1': 'Empty',
+};
+
+/// Descriptor for `Empty`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List emptyDescriptor = $convert.base64Decode(
+    'CgVFbXB0eQ==');
+

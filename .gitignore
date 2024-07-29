@@ -71,7 +71,9 @@ server.build
 server.dist
 server.onefile-build
 .DS_Store
-example/server/server_py_flutter_osx.spec
-example/server/server_py_flutter.spec
-example/server/server_py_flutter_lnx.spec
-example/server/server_py_flutter_win.spec
+server/server_py_flutter_osx.spec
+server/server_py_flutter.spec
+server/server_py_flutter_lnx.spec
+server/server_py_flutter_win.spec
+
+app/assets/*.exe

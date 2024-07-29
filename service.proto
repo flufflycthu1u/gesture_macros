@@ -1,9 +1,19 @@
 syntax = "proto3";
 
+// A service that provides the blendshapes of a face from a webcam
 service FacialLandmarkerService {
-    rpc getBlendshapeStream(BlendshapeResponse) returns (stream BlendshapeResponse) {}
+    // Streams blendshapes as maps
+    rpc GetBlendshapeStream(Empty) returns (stream BlendshapeResponse) {}
 }
 
+// Blendshape result from model
 message BlendshapeResponse {
+    // Each blendshape is provided as a name and a float value
     map<string, float> blendshape = 1;
+}
+
+
+// Empty message for requesting stream
+message Empty {
+
 }

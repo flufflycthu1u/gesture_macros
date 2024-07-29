@@ -50,5 +50,99 @@
             "program": "lib/main.dart",
             "flutterMode": "release"
         },
+        {
+            "name": "app (remote server)",
+            "type": "dart",
+            "request": "launch",
+            "program": "app/lib/main.dart",
+            "toolArgs": [
+                "--dart-define",
+                "useRemote=true",
+              ],
+        },
+        {
+            "name": "app (remote server, profile)",
+            "type": "dart",
+            "request": "launch",
+            "program": "app/lib/main.dart",
+            "toolArgs": [
+                "--dart-define",
+                "useRemote=true",
+              ],
+              "flutterMode": "profile"
+        },
+        {
+            "name": "app (remote server, release)",
+            "type": "dart",
+            "request": "launch",
+            "program": "app/lib/main.dart",
+            "toolArgs": [
+                "--dart-define",
+                "useRemote=true",
+              ],
+            "flutterMode": "release"
+        },
+        {
+            "name": "app (remote server, auto start)",
+            "type": "dart",
+            "request": "launch",
+            "program": "app/lib/main.dart",
+            "toolArgs": [
+                "--dart-define",
+                "useRemote=true",
+              ],
+            "preLaunchTask": "start server",
+            //"postDebugTask": "stop server" // this one kills Flutter UI when doing hot restart, better keep server running to keep host restart working
+        },
+        {
+            "name": "app (bundled server, release)",
+            "type": "dart",
+            "request": "launch",
+            "program": "app/lib/main.dart",
+            "flutterMode": "release"
+        },
+        {
+            "name": "app (bundled server)",
+            "type": "dart",
+            "request": "launch",
+            "program": "app/lib/main.dart",
+        },
+        {
+            "name": "web app (remote server, auto start)",
+            "request": "launch",
+            "program": "app/lib/main.dart",
+            "type": "dart",
+            "toolArgs": [
+                "--dart-define",
+                "useRemote=true",
+                "--dart-define",
+                "port=8080",
+              ],
+            "preLaunchTask": "start server",
+            "postDebugTask": "stop server"
+        },
+        {
+            "name": "web app (remote server, auto start, release)",
+            "request": "launch",
+            "program": "app/lib/main.dart",
+            "type": "dart",
+            "toolArgs": [
+                "--dart-define",
+                "useRemote=true",
+                "--dart-define",
+                "port=8080",
+              ],
+            "flutterMode": "release",
+            "preLaunchTask": "start server",
+            "postDebugTask": "stop server",
+        },
+        {
+            "name": "server.py",
+            "type": "python",
+            "request": "launch",
+            "program": "./set_generator/server.py",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
     ]
 }
