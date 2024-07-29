@@ -10,9 +10,11 @@ dependencies:
   flutter:
     sdk: flutter
   grpc: ^4.0.0
+  keyboard_invoker: ^1.0.0
   path: ^1.9.0
   path_provider: ^2.1.3
   protobuf: ^3.1.0
+  provider: ^6.1.2
 
 dev_dependencies:
   flutter_test:
