@@ -37,24 +37,18 @@
         //       ]
         // },
         {
-            "name": "app",
-            "cwd": "example/app",
-            "request": "launch",
-            "type": "dart",
-        },
-        {
             "name": "app (release)",
             "cwd": "example/app",
             "type": "dart",
             "request": "launch",
-            "program": "lib/main.dart",
+            "program": "lib/gesture_macros.dart",
             "flutterMode": "release"
         },
         {
             "name": "app (remote server)",
             "type": "dart",
             "request": "launch",
-            "program": "app/lib/main.dart",
+            "program": "app/lib/gesture_macros.dart",
             "toolArgs": [
                 "--dart-define",
                 "useRemote=true",
@@ -64,7 +58,7 @@
             "name": "app (remote server, profile)",
             "type": "dart",
             "request": "launch",
-            "program": "app/lib/main.dart",
+            "program": "app/lib/gesture_macros.dart",
             "toolArgs": [
                 "--dart-define",
                 "useRemote=true",
@@ -75,7 +69,7 @@
             "name": "app (remote server, release)",
             "type": "dart",
             "request": "launch",
-            "program": "app/lib/main.dart",
+            "program": "app/lib/gesture_macros.dart",
             "toolArgs": [
                 "--dart-define",
                 "useRemote=true",
@@ -86,7 +80,7 @@
             "name": "app (remote server, auto start)",
             "type": "dart",
             "request": "launch",
-            "program": "app/lib/main.dart",
+            "program": "app/lib/gesture_macros.dart",
             "toolArgs": [
                 "--dart-define",
                 "useRemote=true",
@@ -98,19 +92,19 @@
             "name": "app (bundled server, release)",
             "type": "dart",
             "request": "launch",
-            "program": "app/lib/main.dart",
+            "program": "app/lib/gesture_macros.dart",
             "flutterMode": "release"
         },
         {
             "name": "app (bundled server)",
             "type": "dart",
             "request": "launch",
-            "program": "app/lib/main.dart",
+            "program": "app/lib/gesture_macros.dart",
         },
         {
             "name": "web app (remote server, auto start)",
             "request": "launch",
-            "program": "app/lib/main.dart",
+            "program": "app/lib/gesture_macros.dart",
             "type": "dart",
             "toolArgs": [
                 "--dart-define",
@@ -124,7 +118,7 @@
         {
             "name": "web app (remote server, auto start, release)",
             "request": "launch",
-            "program": "app/lib/main.dart",
+            "program": "app/lib/gesture_macros.dart",
             "type": "dart",
             "toolArgs": [
                 "--dart-define",
@@ -138,9 +132,9 @@
         },
         {
             "name": "server.py",
-            "type": "python",
+            "type": "debugpy",
             "request": "launch",
-            "program": "./set_generator/server.py",
+            "program": "./server/server.py",
             "console": "integratedTerminal",
             "justMyCode": true
         },
