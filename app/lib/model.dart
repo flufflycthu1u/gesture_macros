@@ -22,7 +22,7 @@ class Gesture {
   bool isActive(Map<String, double> blendshapes) {
     bool active = true;
     values.forEach((k, v) {
-      if (blendshapes[k]! < v) {
+      if (blendshapes[k] != null && blendshapes[k]! < v) {
         active = false;
       }
     });

@@ -54,8 +54,11 @@ class MyHomePageState extends State<MyHomePage> with WidgetsBindingObserver {
   final List<Gesture> gestureList = [
     Gesture(name: 'Look left', values: {'eyeLookOutLeft' : 0.7, 'eyeLookInRight' : 0.7}),
     Gesture(name: 'Look right', values: {'eyeLookInLeft' : 0.7, 'eyeLookOutRight' : 0.7}),
-    Gesture(name: 'Look up', values: {'eyeLookUpLeft' : 0.6, 'eyeLookUpRight' : 0.6}),
-    Gesture(name: 'Look down', values: {'eyeLookDownLeft' : 0.3, 'eyeLookDownRight' : 0.3}),    
+    Gesture(name: 'Look up', values: {'eyeLookUpLeft' : 0.5, 'eyeLookUpRight' : 0.5}),
+    Gesture(name: 'Look down', values: {'eyeLookDownLeft' : 0.4, 'eyeLookDownRight' : 0.4}),
+    Gesture(name: 'Brow down', values: {'browDownLeft' : 0.5, 'browDownRight' : 0.5}),
+    Gesture(name: 'Brow up', values: {'browOuterUpLeft' : 0.5, 'browOuterUpRight' : 0.5, 'browInnerUp' : 0.3}),
+    Gesture(name: 'Mouth open', values: {'jawOpen' : 0.4}),
   ];
   bool ready = false;
   bool streaming = false;

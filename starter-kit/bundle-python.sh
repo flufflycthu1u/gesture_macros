@@ -60,8 +60,8 @@ if [[ $nuitka == true ]]; then
     export PYTHONPATH="./grpc_generated"
     $PYTHON -m nuitka server.py --standalone --onefile --output-dir=./dist --output-filename="$exeNameFull"
 else
-    #$PYTHON -m PyInstaller --onefile --noconfirm --clean --log-level=WARN --name="$exeNameFull" --paths="./grpc_generated" --add-data "C:\Program Files\Python310\Lib\site-packages\mediapipe:mediapipe" --hidden-import "setuptools" server.py 
-    $PYTHON -m PyInstaller --noconfirm --clean --log-level=WARN ".\server_py_flutter_win.spec"
+    $PYTHON -m PyInstaller --onefile --noconfirm --clean --log-level=WARN --name="$exeNameFull" --paths="./grpc_generated" --add-data "C:\Users\garrityp\AppData\Local\Programs\Python\Python310\Lib\site-packages\mediapipe:mediapipe" --hidden-import "setuptools" server.py 
+    #$PYTHON -m PyInstaller --noconfirm --clean --log-level=WARN ".\server_py_flutter_win.spec"
 fi
 cd $workingDir
 
