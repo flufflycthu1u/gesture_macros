@@ -13,7 +13,7 @@ fonttools==4.53.1
 jax==0.4.30
 jaxlib==0.4.30
 kiwisolver==1.4.5
-matplotlib==3.9.1
+matplotlib==3.9.2
 mediapipe==0.10.14
 ml-dtypes==0.4.0
 numpy==2.0.1

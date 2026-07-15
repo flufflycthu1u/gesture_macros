@@ -38,6 +38,7 @@ __pycache__/
 
 # Add Python virtual environment
 venv/
+.venv/
 
 # Add Python distribution directories
 dist/
